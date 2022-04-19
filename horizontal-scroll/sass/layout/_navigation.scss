@@ -1,0 +1,63 @@
+.scroll-area{
+    overflow: hidden;
+}
+/*hide inputs*/
+input{
+    opacity: 0;
+    position: absolute;
+    top: -10000em;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+.menu{
+    margin: {
+        right:2em ;
+        left: 2em;
+        top: 2em;
+    }
+    background:conic-gradient(from 101.7deg at 4.83% -66.67%, #002F66 -31.99deg, #DCEBCE 213.74deg, #002F66 328.01deg, #DCEBCE 573.74deg);
+    border-radius: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    font-family: 'roboto';
+    color: white;
+    &__label{
+        padding: 0.5em;
+        cursor: pointer;
+        margin-top: .2em;
+        margin-bottom: .2em;
+        font-size: 14px;
+        &:hover{
+            color: #002F66;
+            background: rgb(255, 255, 255);
+            border-radius: 19px;
+            /*background-color: #F6EFCE;*/
+            opacity: 1;
+            transition: 0.5s
+        }
+    }
+}
+/*funcion labels*/
+.one_input:checked  ~ .cards{
+    transform: translateX(0);
+    
+    }
+.two_input:checked ~ .cards{
+    transform: translateX(-25%);
+    }
+
+.three_input:checked ~ .cards{
+    transform: translateX(-50%);
+    }
+    
+.four_input:checked ~ .cards{
+    transform: translateX(-75%);
+    }
